@@ -14,20 +14,14 @@ namespace Assets.Scripts.Utils
             Squeezed
         }
 
-        public enum Edges
+        public enum ObjectType
         {
-            LEFT,
-            RIGHT,
-            TOP,
-            BOTTOM,
-            NONE
-        };
-
-        public enum Direction
-        {
-            HORIZONTAL,
-            VERTICAL
-        };
+            SOLID,
+            MOVEABLE,
+            LEATHAL,
+            HOT,
+            SLIPPERY
+        }
 
         public enum Features
         {
@@ -47,7 +41,7 @@ namespace Assets.Scripts.Utils
         };
 
         public enum Mood
-        { 
+        {
             SAD,
             HAPPY,
             ANGRY
