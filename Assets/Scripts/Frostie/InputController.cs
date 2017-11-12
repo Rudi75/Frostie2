@@ -5,31 +5,55 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
 
-    private PlayerMovement movement;
-    private CollisionController collisionController;
-    
-
-    void Start()
-    {
-        //TODO remove when implementing multiple frostie parts
-        movement = GetComponentInChildren<PlayerMovement>();
-        collisionController = GetComponentInChildren<CollisionController>();
-    }
 
     void Update()
     {
+        PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+        CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
+        ThrowHeadScript throwHeadScript = FrostiePartManager.instance.activePart.GetComponent<ThrowHeadScript>();
         float inputX = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(inputX) > 0 && collisionController.canMove(inputX))
+
+        if (movement != null && collisionController != null)
         {
-            movement.move(inputX);
-        }else
-        {
-            movement.move(0);
+
+            if (Mathf.Abs(inputX) > 0 && collisionController.canMove(inputX))
+            {
+                movement.move(inputX);
+            }
+            else
+            {
+                movement.move(0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && collisionController.isGrounded)
+            {
+                movement.jump();
+            }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && collisionController.isGrounded)
+        if(throwHeadScript != null && Input.GetKeyDown(KeyCode.Q))
         {
-            movement.jump();
+            throwHeadScript.setForward();
         }
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            FrostiePartManager.instance.recallHead();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Y))
+        {
+            FrostiePartManager.instance.decoupleMiddlePart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            FrostiePartManager.instance.recallMiddlePart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            FrostiePartManager.instance.switchPart();
+        }
+
     }
 }

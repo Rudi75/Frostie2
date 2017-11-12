@@ -1,63 +1,61 @@
 using UnityEngine;
 
-namespace UnitySampleAssets._2D
+
+public class Camera2DFollow : MonoBehaviour
 {
 
-    public class Camera2DFollow : MonoBehaviour
+    public Transform target;
+    public float damping = 1;
+    public float lookAheadFactor = 3;
+    public float lookAheadReturnSpeed = 0.5f;
+    public float lookAheadMoveThreshold = 0.1f;
+
+    private float offsetZ;
+    private Vector3 lastTargetPosition;
+    private Vector3 currentVelocity;
+    private Vector3 lookAheadPos;
+
+    public BoxCollider2D Bounds;
+
+    private Vector3 minPosition, maxPosition;
+
+    public void Start()
+    {
+        minPosition = Bounds.bounds.min;
+        maxPosition = Bounds.bounds.max;
+        lastTargetPosition = target.position;
+        offsetZ = (transform.position - target.position).z;
+        transform.parent = null;
+    }
+
+    // Update is called once per frame
+    private void Update()
     {
 
-        public Transform target;
-        public float damping = 1;
-        public float lookAheadFactor = 3;
-        public float lookAheadReturnSpeed = 0.5f;
-        public float lookAheadMoveThreshold = 0.1f;
+        // only update lookahead pos if accelerating or changed direction
+        float xMoveDelta = (target.position - lastTargetPosition).x;
 
-        private float offsetZ;
-        private Vector3 lastTargetPosition;
-        private Vector3 currentVelocity;
-        private Vector3 lookAheadPos;
+        bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
-        public BoxCollider2D Bounds;
-
-        private Vector3 minPosition, maxPosition;
-
-        public void Start()
+        if (updateLookAheadTarget)
         {
-            minPosition = Bounds.bounds.min;
-            maxPosition = Bounds.bounds.max;
-            lastTargetPosition = target.position;
-            offsetZ = (transform.position - target.position).z;
-            transform.parent = null;
+            lookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign(xMoveDelta);
+        }
+        else
+        {
+            lookAheadPos = Vector3.MoveTowards(lookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
         }
 
-        // Update is called once per frame
-        private void Update()
-        {
+        Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward * offsetZ;
+        var cameraHalfWidth = GetComponent<Camera>().orthographicSize * ((float)Screen.width / Screen.height);
 
-            // only update lookahead pos if accelerating or changed direction
-            float xMoveDelta = (target.position - lastTargetPosition).x;
+        aheadTargetPos.x = Mathf.Clamp(aheadTargetPos.x, minPosition.x + cameraHalfWidth, maxPosition.x - cameraHalfWidth);
+        aheadTargetPos.y = Mathf.Clamp(aheadTargetPos.y, minPosition.y + GetComponent<Camera>().orthographicSize, maxPosition.y - GetComponent<Camera>().orthographicSize);
+        Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
 
-            bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
+        transform.position = newPos;
 
-            if (updateLookAheadTarget)
-            {
-                lookAheadPos = lookAheadFactor*Vector3.right*Mathf.Sign(xMoveDelta);
-            }
-            else
-            {
-                lookAheadPos = Vector3.MoveTowards(lookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
-            }
-
-            Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward*offsetZ;
-            var cameraHalfWidth = GetComponent<Camera>().orthographicSize * ((float)Screen.width / Screen.height);
-
-            aheadTargetPos.x = Mathf.Clamp(aheadTargetPos.x, minPosition.x + cameraHalfWidth, maxPosition.x - cameraHalfWidth);
-            aheadTargetPos.y = Mathf.Clamp(aheadTargetPos.y, minPosition.y + GetComponent<Camera>().orthographicSize, maxPosition.y - GetComponent<Camera>().orthographicSize);
-            Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
-
-            transform.position = newPos;
-
-            lastTargetPosition = target.position;
-        }
+        lastTargetPosition = target.position;
     }
+
 }

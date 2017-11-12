@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed = 10;
     [SerializeField] private float jumpHight = 40;
+    public float viewDirection { get; set; }
 
     private float movement;
     private bool isWalking = false;
@@ -22,14 +23,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void move(float inputX)
     {
-        float viewDirection = transform.localScale.x / Mathf.Abs(transform.localScale.x);
+        viewDirection = transform.localScale.x / Mathf.Abs(transform.localScale.x);
 
         if (viewDirection * inputX < 0)
         {
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
-            viewDirection = inputX;
+            viewDirection *= -1;
         }
 
         movement = speed * inputX;

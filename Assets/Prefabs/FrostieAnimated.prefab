@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4091088051336840}
   - component: {fileID: 61909914579108184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMelted
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4767938356962598}
   - component: {fileID: 212062826699802358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4779865247023432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBackFromLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4915479967046620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigthArmRotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4984551968226860}
   - component: {fileID: 212341654891819388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4830053288051776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4984334071103474}
   - component: {fileID: 212287122840595152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4094046737336216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4357893134401612}
   - component: {fileID: 58057952744739716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4844808957928378}
   - component: {fileID: 212053626993274966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4341163871230966}
   - component: {fileID: 212724458631758792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4234529478838504}
   - component: {fileID: 212680378340542126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4883359697590064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4079809034436450}
   - component: {fileID: 212217916264021656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4356847518591744}
   - component: {fileID: 212207962121596702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646845379865218}
   - component: {fileID: 212189273319932118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4312150801222852}
   - component: {fileID: 212883555575453876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthSad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4472990755224446}
   - component: {fileID: 212847456864957216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4358613441525494}
   - component: {fileID: 212818474152300462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthSadSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4230473233401610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieSideFromLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164561906125036}
   - component: {fileID: 58354997590179194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573375801373164}
   - component: {fileID: 212055978410621876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928726480768092}
   - component: {fileID: 212411399341928886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SteamCloudTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130890490656110}
   - component: {fileID: 212776707576911288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthAngrySide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4222187266456816}
   - component: {fileID: 212671440596006366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieEyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4123133495478702}
   - component: {fileID: 212565732238197364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4469936731309242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4500371006316246}
   - component: {fileID: 212365099419353152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SteamCloudFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4270704040664478}
   - component: {fileID: 212104529642116044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4281077513186200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieSteam
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4154054165249136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseOverlaySide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4537782445206664}
   - component: {fileID: 212382060124468782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SteamCloudFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4753752924920584}
   - component: {fileID: 212747536217528090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152050432304744}
   - component: {fileID: 212968318954783898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4218335259701722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4776385841805180}
   - component: {fileID: 212580182899919348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthAngry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,8 @@ GameObject:
   - component: {fileID: 4557261350347178}
   - component: {fileID: 95199118127796292}
   - component: {fileID: 114472972192440208}
-  m_Layer: 0
+  - component: {fileID: 114377673525214442}
+  m_Layer: 9
   m_Name: FrostieAnimated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4260261931954440}
   - component: {fileID: 212978733341007770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +619,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4325828362640970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftArmRotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4504780605687692}
   - component: {fileID: 58206971215344870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOnlySide
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -650,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4896353067058124}
   - component: {fileID: 212915582844833948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4021413421084326}
   - component: {fileID: 212616355859003014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieEyeReight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113176923933216}
   - component: {fileID: 212154423611869408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4074129845837606}
   - component: {fileID: 58136922250895564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4464783305317360}
   - component: {fileID: 212897825595702116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SteamCloudThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +730,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4047877874649250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieButtonsMiddleSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4403934705848538}
   - component: {fileID: 212147329063491994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4245762328599734}
   - component: {fileID: 212764198437237664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210858836115380}
   - component: {fileID: 212350981728856852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4688567946709756}
   - component: {fileID: 212558476643252620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4241511974683866}
   - component: {fileID: 212633086742494198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4537192026842808}
   - component: {fileID: 212038447628081776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +843,7 @@ GameObject:
   - component: {fileID: 4258377147070724}
   - component: {fileID: 212630847902252392}
   - component: {fileID: 114229549168857170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalSideThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +858,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4688351357964816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4966967894032448}
   - component: {fileID: 212584462080806864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482704605346012}
   - component: {fileID: 212369278808995606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieEyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4609333938087386}
   - component: {fileID: 212088669068600538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthHappy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4403162697342696}
   - component: {fileID: 212470106318617892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4268228273123780}
   - component: {fileID: 212249192894502542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SteamCloudOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +953,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4264075682051594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieButtonsMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +968,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4986109088311792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4251634563238580}
   - component: {fileID: 212545804251446150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1001,7 @@ GameObject:
   - component: {fileID: 4935316504541964}
   - component: {fileID: 58508918057180038}
   - component: {fileID: 60943218950508270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1016,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4908064849325846}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddelOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4196104260859136}
   - component: {fileID: 212340103613491524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieEyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,7 +1048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4074189785677044}
   - component: {fileID: 114428402116209802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOverlaySide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991645098950308}
   - component: {fileID: 212703280613291022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1081,7 @@ GameObject:
   - component: {fileID: 4887487939824560}
   - component: {fileID: 212100460117635480}
   - component: {fileID: 114489083593479868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalSideTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4511110358288836}
   - component: {fileID: 212109120720943860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieNose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4786162995678842}
   - component: {fileID: 212149183626626232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4966413730851796}
   - component: {fileID: 212491830017569934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925331640272102}
   - component: {fileID: 212406115422092946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1159,7 +1160,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4289238401518230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftArmRotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4081720061001998}
   - component: {fileID: 212528761104217366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,7 +1192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4363489591329660}
   - component: {fileID: 212217112936636136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1206,7 +1207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4308581174079120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4208642552071498}
   - component: {fileID: 212279596773863780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1238,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4724848995837410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieButtonsBaseSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4720547579569664}
   - component: {fileID: 212492520901106254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMeltedBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4974522788063926}
   - component: {fileID: 212441651199286694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465528676031970}
   - component: {fileID: 212371185832126366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1301,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4514684577974318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieButtonsBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4778582292569722}
   - component: {fileID: 212341066418055276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4599359237697564}
   - component: {fileID: 58497491283847860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1348,7 +1349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4143735393385558}
   - component: {fileID: 212304395686254846}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4631394974590300}
   - component: {fileID: 212486865732575984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieNoseMissing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1380,7 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4519794670725578}
   - component: {fileID: 212764293132542466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieNoseMissingSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4995039624774864}
   - component: {fileID: 60078654443231488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseOnlySide
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1411,7 +1412,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4185032464080008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,7 +1429,7 @@ GameObject:
   - component: {fileID: 4132629466679336}
   - component: {fileID: 212385856979616770}
   - component: {fileID: 114393185849117822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalSideFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1446,7 @@ GameObject:
   - component: {fileID: 4106606014794918}
   - component: {fileID: 212752038984901510}
   - component: {fileID: 114295260579996342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalSideOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1460,7 +1461,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670302091677720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1475,7 +1476,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4231603357006190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieFrontFromLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4214185144536046}
   - component: {fileID: 212209467460370952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieCoalLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4411018574326136}
   - component: {fileID: 212708343782029460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,7 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4250914380513256}
   - component: {fileID: 212078273425945452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1542,7 +1543,11 @@ GameObject:
   - component: {fileID: 114533951214993036}
   - component: {fileID: 114610803548055764}
   - component: {fileID: 82050756736227700}
-  m_Layer: 0
+  - component: {fileID: 114340800039388418}
+  - component: {fileID: 114485079620584350}
+  - component: {fileID: 114669641315284364}
+  - component: {fileID: 114088422096428082}
+  m_Layer: 9
   m_Name: FrostieSide
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1557,7 +1562,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4658886985527478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddelOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4208466509815998}
   - component: {fileID: 114108439476399374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4858552906491430}
   - component: {fileID: 212480981807422328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1605,7 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832521900113410}
   - component: {fileID: 212679030641482758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1621,7 +1626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353725975836636}
   - component: {fileID: 212473687876500388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieNoseSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1637,7 +1642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4005517219334980}
   - component: {fileID: 212408958275060994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,7 +1658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448771597712494}
   - component: {fileID: 212185384141279034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieEyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1673,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4183897037313978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOnlyFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,7 +1688,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4681310787267836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieHeadOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1698,7 +1703,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4633384922859842}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddelOverlaySide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4410327333174646}
   - component: {fileID: 60058719618893010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieBaseLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4287575133693428}
   - component: {fileID: 58926239176152192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMiddleOnlySide
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1746,7 +1751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624563308303884}
   - component: {fileID: 212931443148418748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1762,7 +1767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4063090145598752}
   - component: {fileID: 212176899293504644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1778,7 +1783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4295683584335234}
   - component: {fileID: 212517433557048418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostieMouthHappySide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874075459594770}
   - component: {fileID: 212596518375860242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1810,7 +1815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210836949154198}
   - component: {fileID: 212098674829531046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseLayerThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1830,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4380136817753066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigthArmRotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,7 +2857,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324815211482160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.2, y: -8.02, z: -0.1}
+  m_LocalPosition: {x: -0.07, y: 1.99, z: -0.1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4894194699393418}
@@ -3794,6 +3799,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114088422096428082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875419443768698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a887651b9afe9d84fa5d12cf66e6e0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 212147329063491994}
+  halfCircle: {fileID: 212053626993274966}
+  rotationPerFrame: 2
+  sizeChangePerFrame: 0.02
+  throwForce: 19
 --- !u!114 &114108439476399374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3831,6 +3852,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114340800039388418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875419443768698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e620097148bc30d43a795f7781abc3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 4294966523
+  collisionDistance: 0.2
+--- !u!114 &114377673525214442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324815211482160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564cbd6321c9c4747b9f1b68c0214f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114393185849117822
@@ -3872,6 +3919,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b426e15d59d63e4ba790284c49f750f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114485079620584350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875419443768698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7019206cb947cd74aa0766b45915a04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpHight: 40
 --- !u!114 &114489083593479868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3911,6 +3971,22 @@ MonoBehaviour:
   FreezeGround: {fileID: 8300000, guid: 0177492ad04c87a42a9782379ed9d819, type: 3}
   Death: {fileID: 8300000, guid: 746976f80c1dd8c4eba2df64b0d3d3f4, type: 3}
   DeathInFire: {fileID: 8300000, guid: 0721f491a5001464d92eb17b4983a652, type: 3}
+--- !u!114 &114669641315284364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875419443768698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7adb80d0cd3684083f77cac1c93e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadClonePrefab: {fileID: 151660, guid: 7840e03fcfa2ce246aaa5eaa4abf9e94, type: 2}
+  MiddleClonePrefab: {fileID: 122796, guid: 20c619118d4808544adb41106a7f7441, type: 2}
+  HeadAndMiddleClonePrefab: {fileID: 110810, guid: 0d336ccd562328340b3045242789e5f1,
+    type: 2}
+  cameraScript: {fileID: 0}
 --- !u!212 &212038447628081776
 SpriteRenderer:
   m_ObjectHideFlags: 1
