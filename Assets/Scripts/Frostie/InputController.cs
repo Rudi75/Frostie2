@@ -8,39 +8,55 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
-        CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
-        ThrowHeadScript throwHeadScript = FrostiePartManager.instance.activePart.GetComponent<ThrowHeadScript>();
+
+
+       
         float inputX = Input.GetAxis("Horizontal");
 
-        if (movement != null && collisionController != null)
+        if (Mathf.Abs(inputX) > 0)
         {
-
-            if (Mathf.Abs(inputX) > 0 && collisionController.canMove(inputX))
+            CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
+            PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+            if (movement != null && collisionController != null)
             {
-                movement.move(inputX);
+                if (collisionController.canMove(inputX))
+                {
+                    movement.move(inputX);
+                }
+                else
+                {
+                    movement.move(0);
+                }
             }
-            else
-            {
-                movement.move(0);
-            }
+        }
 
-            if (Input.GetKeyDown(KeyCode.Space) && collisionController.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
+            PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+            if (movement != null && collisionController != null && collisionController.isGrounded)
             {
                 movement.jump();
             }
         }
 
-        if(throwHeadScript != null && Input.GetKeyDown(KeyCode.Q))
+       
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            throwHeadScript.setForward();
+            ThrowHeadScript throwHeadScript = FrostiePartManager.instance.activePart.GetComponent<ThrowHeadScript>();
+            if (throwHeadScript != null)
+            {
+                throwHeadScript.setForward();
+            }
         }
-        if(Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
             FrostiePartManager.instance.recallHead();
         }
 
-        if(Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
             FrostiePartManager.instance.decoupleMiddlePart();
         }

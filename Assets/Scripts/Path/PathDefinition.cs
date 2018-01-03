@@ -6,8 +6,7 @@ using System.Linq;
 
 public class PathDefinition : MonoBehaviour
 {
-    public List<Transform> Points = new List<Transform>();
-	//public Transform[] Points;
+    [SerializeField] private List<Transform> Points = new List<Transform>();
 	
 	public IEnumerator<Transform> GetPathEnumerator()
 	{
