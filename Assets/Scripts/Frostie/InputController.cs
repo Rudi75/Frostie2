@@ -10,37 +10,34 @@ public class InputController : MonoBehaviour
     {
 
 
-       
+
         float inputX = Input.GetAxis("Horizontal");
 
-        if (Mathf.Abs(inputX) > 0)
+
+        CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
+        PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+        if (movement != null && collisionController != null)
         {
-            CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
-            PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
-            if (movement != null && collisionController != null)
+            if (collisionController.canMove(inputX))
             {
-                if (collisionController.canMove(inputX))
-                {
-                    movement.move(inputX);
-                }
-                else
-                {
-                    movement.move(0);
-                }
+                movement.move(inputX);
+            }
+            else
+            {
+                movement.move(0);
             }
         }
 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
-            PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
             if (movement != null && collisionController != null && collisionController.isGrounded)
             {
                 movement.jump();
             }
         }
 
-       
+
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -69,6 +66,11 @@ public class InputController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             FrostiePartManager.instance.switchPart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            FrostiePartManager.instance.changeMeltState();
         }
 
     }

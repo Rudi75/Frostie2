@@ -16,6 +16,7 @@ public class FrostiePartManager : MonoBehaviour
     private GameObject headClone;
     private PlayerMovement middlePartClone;
     private PlayerMovement headAndMiddleClone;
+    private FrostieAnimationManager frostieAnimationManager;
 
     public GameObject activePart { get; set; }
     private int activePartIndex;
@@ -24,9 +25,20 @@ public class FrostiePartManager : MonoBehaviour
     public GameObject HeadAndMiddleClonePrefab;
     public Camera2DFollow cameraScript;
 
+    private bool isMelted_;
+    public bool isMelted
+    {
+        get
+        {
+            return isMelted_;
+        }
+    }
+
+
     void Start()
     {
         instance = this;
+        frostieAnimationManager = GetComponent<FrostieAnimationManager>();
         foreach (Transform childTransform in transform)
         {
             foreach (Transform child in childTransform)
@@ -49,7 +61,7 @@ public class FrostiePartManager : MonoBehaviour
 
     public GameObject decoupleHead()
     {
-        if (headClone == null)
+        if (headClone == null && !isMelted_)
         {
 
             if (headAndMiddleClone == null)
@@ -98,13 +110,16 @@ public class FrostiePartManager : MonoBehaviour
             }
             setActivePart(3);
             return headClone;
+        }else
+        {
+            Debug.Log("decoupleHead not possible");
         }
         return null;
     }
 
     public GameObject decoupleMiddlePart()
     {
-        if (middlePartClone == null && headAndMiddleClone == null)
+        if (middlePartClone == null && headAndMiddleClone == null && !isMelted_)
         {
             if (headClone != null)
             {
@@ -137,6 +152,9 @@ public class FrostiePartManager : MonoBehaviour
 
             }        
 
+        }else
+        {
+            Debug.Log("decoupleMid not possible");
         }
         return null;
     }
@@ -283,6 +301,21 @@ public class FrostiePartManager : MonoBehaviour
             activePartIndex = part;
         }
         return success;
+    }
+
+
+    public void changeMeltState()
+    {
+        
+        if (headClone == null && middlePartClone == null && headAndMiddleClone == null && !activePart.GetComponent<ThrowHeadScript>().isThrowInProgress)
+        {
+
+            isMelted_ = !isMelted_;
+            frostieAnimationManager.animateMelting(isMelted_);
+        }else
+        {
+            Debug.Log("Melting not possibe");
+        }
     }
 
     public void FixedUpdate()

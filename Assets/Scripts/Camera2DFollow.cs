@@ -49,11 +49,13 @@ public class Camera2DFollow : MonoBehaviour
         Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward * offsetZ;
         var cameraHalfWidth = GetComponent<Camera>().orthographicSize * ((float)Screen.width / Screen.height);
 
-        aheadTargetPos.x = Mathf.Clamp(aheadTargetPos.x, minPosition.x + cameraHalfWidth, maxPosition.x - cameraHalfWidth);
-        aheadTargetPos.y = Mathf.Clamp(aheadTargetPos.y, minPosition.y + GetComponent<Camera>().orthographicSize, maxPosition.y - GetComponent<Camera>().orthographicSize);
-        Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
+        aheadTargetPos.y = Mathf.Lerp(transform.position.y, target.position.y, 2 *Time.deltaTime);
 
-        transform.position = newPos;
+        aheadTargetPos.x = Mathf.Clamp(aheadTargetPos.x, minPosition.x + cameraHalfWidth, maxPosition.x - cameraHalfWidth);
+       // aheadTargetPos.y = Mathf.Clamp(aheadTargetPos.y, minPosition.y + GetComponent<Camera>().orthographicSize, maxPosition.y - GetComponent<Camera>().orthographicSize);
+        // Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
+
+        transform.position = aheadTargetPos; //newPos;
 
         lastTargetPosition = target.position;
     }

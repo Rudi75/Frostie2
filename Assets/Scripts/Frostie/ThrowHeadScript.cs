@@ -17,9 +17,13 @@ public class ThrowHeadScript : MonoBehaviour
     public float sizeChangePerFrame = 0.05f;
 
     public int throwForce = 19;
-
-    
-
+    public bool isThrowInProgress
+    {
+        get
+        {
+           return state > 0;
+        }
+    }
 
     void Start()
     {
@@ -112,10 +116,22 @@ public class ThrowHeadScript : MonoBehaviour
     }
     public void setForward()
     {
-        forward = true;
+        if (!FrostiePartManager.instance.isMelted)
+        {
+            forward = true;
+        }else
+        {
+            Debug.Log("ThrowHead.forward not possible");
+        }
     }
     public void setBackward()
     {
-        backward = true;
+        if (state > 0)
+        {
+            backward = true;
+        }else
+        {
+            Debug.Log("ThrowHead.backward not possible");
+        }
     }
 }

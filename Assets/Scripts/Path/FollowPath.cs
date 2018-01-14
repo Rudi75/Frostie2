@@ -81,7 +81,7 @@ public class FollowPath : TriggerAble
         {
             if (obj.name.Contains("Frostie"))
             {
-                obj.transform.parent.Translate(movement, Space.World);
+                obj.transform.parent.parent.Translate(movement, Space.World);
             }else
             {
                 obj.transform.Translate(movement, Space.World);

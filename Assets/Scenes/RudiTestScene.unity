@@ -500,7 +500,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20.187992
+  orthographic size: 15.76
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -591,6 +591,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1331392051 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135694, guid: 8c5056ffdbe56fd4887d08112bf4cf13, type: 2}
+  m_PrefabInternal: {fileID: 1693643517}
+--- !u!114 &1331392057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1331392051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b71a692c956144dbb0b9da32c98561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types: 00000000
 --- !u!1 &1443693482
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +757,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1511056828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.89, y: -3.12, z: 0}
+  m_LocalPosition: {x: 5.8, y: 36.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1158666758}
@@ -790,6 +806,10 @@ Prefab:
       propertyPath: Path
       value: 
       objectReference: {fileID: 1158666757}
+    - target: {fileID: 11435694, guid: 8c5056ffdbe56fd4887d08112bf4cf13, type: 2}
+      propertyPath: Speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c5056ffdbe56fd4887d08112bf4cf13, type: 2}
   m_IsPrefabParent: 0
@@ -1017,9 +1037,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.9846372}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.9692724}
 --- !u!1 &2132270252
 GameObject:
   m_ObjectHideFlags: 0
