@@ -62,6 +62,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void jump()
     {
+        FrostieAnimationManager frostieAnimationManager = GetComponent<FrostieAnimationManager>();
+        if (frostieAnimationManager != null)
+        {
+            frostieAnimationManager.animateJump();
+        }
+        else
+        {
+            GetComponentInChildren<Animator>().SetTrigger("Jump");
+        }
+    }
+    public void doJump()
+    {
         playerRigidbody.AddForce(new Vector2(0, jumpHight), ForceMode2D.Impulse);
     }
 

@@ -190,7 +190,7 @@ public class FrostiePartManager : MonoBehaviour
             head.gameObject.SetActive(false);
 
             Vector3 scale = headAndMiddleClone.transform.localScale;
-            scale.x *= middlePartClone.viewDirection;
+            scale.x *= middlePartClone.transform.localScale.x;
             headAndMiddleClone.transform.localScale = scale;
 
             headAndMiddleClone.transform.parent = frostieParent;
