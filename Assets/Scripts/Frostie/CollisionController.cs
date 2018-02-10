@@ -56,7 +56,10 @@ namespace Frostie
                 if (aCollider.isActiveAndEnabled)
                 {
                     canMove = MovementHelper.canMove(aCollider, inputX > 0 ? Vector2.right : Vector2.left, collisionLayers);
-
+                    if(canMove == false)
+                    {
+                        break;
+                    }
                 }
             }
             return canMove;

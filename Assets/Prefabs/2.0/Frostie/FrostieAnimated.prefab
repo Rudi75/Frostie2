@@ -3868,7 +3868,6 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 4294966523
-  collisionDistance: 0.2
 --- !u!114 &114377673525214442
 MonoBehaviour:
   m_ObjectHideFlags: 1

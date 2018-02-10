@@ -1076,4 +1076,3 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 4294966523
-  collisionDistance: 0.2
