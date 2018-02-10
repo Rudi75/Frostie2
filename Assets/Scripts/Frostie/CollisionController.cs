@@ -1,85 +1,68 @@
-﻿using Assets.Scripts.Utils;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class CollisionController : MonoBehaviour
+namespace Frostie
 {
-    [SerializeField] private LayerMask collisionLayers;
-    [SerializeField] private float collisionDistance = .2f;
-
-    private Collider2D[] colliders;
-    private Collider2D bottomCollider;
-
-
-    private void Start()
+    public class CollisionController : MonoBehaviour
     {
-        colliders = GetComponentsInChildren<Collider2D>();
-        for (int i = 0; i < colliders.Length; i++)
+        [SerializeField] private LayerMask collisionLayers;
+
+        private Collider2D[] colliders;
+        private Collider2D bottomCollider;
+
+
+        private void Start()
         {
-            if (bottomCollider == null || colliders[i].transform.position.y < bottomCollider.transform.position.y)
+            colliders = GetComponentsInChildren<Collider2D>();
+            for (int i = 0; i < colliders.Length; i++)
             {
-                bottomCollider = colliders[i];
-            }
-        }
-    }
-
-
-    public bool isGrounded
-    {
-        get
-        {
-            Vector3 bottomCenterPosition = bottomCollider.bounds.center;
-            bottomCenterPosition.y -= bottomCollider.bounds.extents.y;
-            Vector3 bottomLeftPosition = bottomCenterPosition;
-            bottomLeftPosition.x = bottomCollider.bounds.min.x + 0.1f;
-            Vector3 bottomRightPosition = bottomCenterPosition;
-            bottomRightPosition.x = bottomCollider.bounds.max.x - 0.1f;
-            return hitsSolidObject(bottomCenterPosition, Vector2.down)
-                || hitsSolidObject(bottomLeftPosition, Vector2.down)
-                || hitsSolidObject(bottomRightPosition, Vector2.down);
-        }
-    }
-
-    public bool canMove(float inputX)
-    {
-        bool canMove = true;
-
-        Vector2 direction = inputX > 0 ? Vector2.right : Vector2.left;
-        
-
-
-        for (int i = 0; i < colliders.Length && canMove; i++)
-        {
-            Collider2D aCollider = colliders[i];
-            if (aCollider.isActiveAndEnabled)
-            {
-                float xPosition = inputX > 0 ? aCollider.bounds.max.x : aCollider.bounds.min.x;
-                Vector2 topPosition = new Vector2(xPosition, aCollider.bounds.max.y - 0.1f);
-                Vector2 middlePosition = new Vector2(xPosition, aCollider.bounds.center.y);
-                Vector2 bottomPosition = new Vector2(xPosition, aCollider.bounds.min.y + 0.1f);
-                if (hitsSolidObject(topPosition, direction) || hitsSolidObject(middlePosition, direction) || hitsSolidObject(bottomPosition, direction))
+                if (bottomCollider == null || colliders[i].transform.position.y < bottomCollider.transform.position.y)
                 {
-                    canMove = false;
+                    bottomCollider = colliders[i];
                 }
             }
         }
-        return canMove;
-    }
 
-    private bool hitsSolidObject(Vector2 topPosition, Vector2 direction)
-    {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(topPosition, direction, collisionDistance, collisionLayers);
-        for (int j = 0; j < hits.Length; j++)
+
+        public bool isGrounded
         {
-            ObjectProperties properties = hits[j].transform.GetComponent<ObjectProperties>();
-            if (properties != null && properties.contains(Enums.ObjectType.SOLID))
+            get
             {
-                return true;
+                Vector3 bottomCenterPosition = bottomCollider.bounds.center;
+                bottomCenterPosition.y -= bottomCollider.bounds.extents.y;
+                Vector3 bottomLeftPosition = bottomCenterPosition;
+                bottomLeftPosition.x = bottomCollider.bounds.min.x + 0.1f;
+                Vector3 bottomRightPosition = bottomCenterPosition;
+                bottomRightPosition.x = bottomCollider.bounds.max.x - 0.1f;
+                return CollisionHelper.hitsObject(bottomCenterPosition, Vector2.down,  collisionLayers, Enums.ObjectType.SOLID)
+                    || CollisionHelper.hitsObject(bottomLeftPosition, Vector2.down,  collisionLayers, Enums.ObjectType.SOLID)
+                    || CollisionHelper.hitsObject(bottomRightPosition, Vector2.down,  collisionLayers, Enums.ObjectType.SOLID);
             }
         }
-        return false;
+
+        public bool canMove(float inputX)
+        {
+            bool canMove = true;
+
+            Vector2 direction = inputX > 0 ? Vector2.right : Vector2.left;
+
+
+
+            for (int i = 0; i < colliders.Length && canMove; i++)
+            {
+                Collider2D aCollider = colliders[i];
+                if (aCollider.isActiveAndEnabled)
+                {
+                    canMove = MovementHelper.canMove(aCollider, inputX > 0 ? Vector2.right : Vector2.left, collisionLayers);
+
+                }
+            }
+            return canMove;
+        }
+
+        
     }
 }
 

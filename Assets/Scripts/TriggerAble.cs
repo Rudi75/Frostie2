@@ -4,47 +4,49 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-
-public abstract class TriggerAble : MonoBehaviour
+namespace Frostie
 {
-    [SerializeField] List<Trigger> triggers;
-    [SerializeField] bool onlyActiveWhenTriggered;
-
-
-    private bool activated_ = false;
-
-    public void Start()
+    public abstract class TriggerAble : MonoBehaviour
     {
-        if (triggers.Count == 0)
+        [SerializeField] List<Trigger> triggers;
+        [SerializeField] bool onlyActiveWhenTriggered;
+
+
+        private bool activated_ = false;
+
+        public void Start()
         {
-            Debug.LogError("No Trigger set on TriggerAble" + gameObject.name);
+            if (triggers.Count == 0)
+            {
+                Debug.LogError("No Trigger set on TriggerAble" + gameObject.name);
+            }
+            foreach (Trigger trigger in triggers)
+            {
+                trigger.addTarget(this);
+            }
         }
-        foreach (Trigger trigger in triggers)
+
+        abstract protected void performAction();
+
+        public void trigger()
         {
-            trigger.addTarget(this);
+            bool allButtonspressed = true;
+            foreach (Trigger trigger in triggers)// all buttons pressed?
+            {
+                if (!trigger.isActivated)
+                    allButtonspressed = false;
+            }
+            if (allButtonspressed && !activated_)
+            {
+                performAction();
+                activated_ = true;
+            }
+            else if (onlyActiveWhenTriggered && activated_)
+            {
+                performAction();
+                activated_ = false;
+            }
         }
     }
 
-    abstract protected void performAction();
-
-    public void trigger()
-    {
-        bool allButtonspressed = true;
-        foreach (Trigger trigger in triggers)// all buttons pressed?
-        {
-            if (!trigger.isActivated)
-                allButtonspressed = false;
-        }
-        if (allButtonspressed && !activated_)
-        {
-            performAction();
-            activated_ = true;
-        }
-        else if (onlyActiveWhenTriggered && activated_)
-        {
-            performAction();
-            activated_ = false;
-        }
-    }
 }
-

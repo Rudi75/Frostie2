@@ -1,40 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public class AnimationCallbackHelper : MonoBehaviour 
+namespace Frostie
 {
-    public void Kill()
+    public class AnimationCallbackHelper : MonoBehaviour
     {
-        Debug.Log("Kill");
-        /*
-        HealthScript livingBeeing = GetComponentInChildren<HealthScript>();
-        if (livingBeeing != null)
+        public void Kill()
         {
-            livingBeeing.Die();
+            Debug.Log("Kill");
+            /*
+            HealthScript livingBeeing = GetComponentInChildren<HealthScript>();
+            if (livingBeeing != null)
+            {
+                livingBeeing.Die();
+            }
+            else
+            {
+                PartHealthScript part = GetComponentInParent<PartHealthScript>();
+                part.Die();
+
+            }
+            */
         }
-        else
+
+        public void Jump()
         {
-            PartHealthScript part = GetComponentInParent<PartHealthScript>();
-            part.Die();
+            Debug.Log("Jump");
+
+            PlayerMovement frostieMoveScript = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+            if (frostieMoveScript != null)
+            {
+                frostieMoveScript.doJump();
+                FrostieSoundManager soundManager = transform.GetComponentInChildren<FrostieSoundManager>();
+                if (soundManager == null) soundManager = transform.parent.GetComponentInChildren<FrostieSoundManager>();
+                if (soundManager == null) soundManager = transform.parent.parent.GetComponentInChildren<FrostieSoundManager>();
+                if (soundManager != null) soundManager.playJumpSound();
+            }
 
         }
-        */
-    }
-
-    public void Jump()
-    {
-        Debug.Log("Jump");
-
-        PlayerMovement frostieMoveScript = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
-        if (frostieMoveScript != null)
-        {
-            frostieMoveScript.doJump();
-            FrostieSoundManager soundManager = transform.GetComponentInChildren<FrostieSoundManager>();
-            if (soundManager == null) soundManager = transform.parent.GetComponentInChildren<FrostieSoundManager>();
-            if (soundManager == null) soundManager = transform.parent.parent.GetComponentInChildren<FrostieSoundManager>();
-            if (soundManager != null) soundManager.playJumpSound();
-        }
-        
     }
 }

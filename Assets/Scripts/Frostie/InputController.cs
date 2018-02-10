@@ -2,76 +2,79 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputController : MonoBehaviour
+namespace Frostie
 {
-
-
-    void Update()
+    public class InputController : MonoBehaviour
     {
 
 
-
-        float inputX = Input.GetAxis("Horizontal");
-
-
-        CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
-        PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
-        if (movement != null && collisionController != null)
+        void Update()
         {
-            if (collisionController.canMove(inputX))
+
+
+
+            float inputX = Input.GetAxis("Horizontal");
+
+
+            CollisionController collisionController = FrostiePartManager.instance.activePart.GetComponent<CollisionController>();
+            PlayerMovement movement = FrostiePartManager.instance.activePart.GetComponent<PlayerMovement>();
+            if (movement != null && collisionController != null)
             {
-                movement.move(inputX);
+                if (collisionController.canMove(inputX))
+                {
+                    movement.move(inputX);
+                }
+                else
+                {
+                    movement.move(0);
+                }
             }
-            else
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                movement.move(0);
+                if (movement != null && collisionController != null && collisionController.isGrounded)
+                {
+                    movement.jump();
+                }
             }
-        }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (movement != null && collisionController != null && collisionController.isGrounded)
+
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                movement.jump();
+                ThrowHeadScript throwHeadScript = FrostiePartManager.instance.activePart.GetComponent<ThrowHeadScript>();
+                if (throwHeadScript != null)
+                {
+                    throwHeadScript.setForward();
+                }
             }
-        }
 
-
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ThrowHeadScript throwHeadScript = FrostiePartManager.instance.activePart.GetComponent<ThrowHeadScript>();
-            if (throwHeadScript != null)
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                throwHeadScript.setForward();
+                FrostiePartManager.instance.recallHead();
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            FrostiePartManager.instance.recallHead();
-        }
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                FrostiePartManager.instance.decoupleMiddlePart();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            FrostiePartManager.instance.decoupleMiddlePart();
-        }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                FrostiePartManager.instance.recallMiddlePart();
+            }
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            FrostiePartManager.instance.recallMiddlePart();
-        }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                FrostiePartManager.instance.switchPart();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            FrostiePartManager.instance.switchPart();
-        }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                FrostiePartManager.instance.changeMeltState();
+            }
 
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            FrostiePartManager.instance.changeMeltState();
         }
-
     }
 }

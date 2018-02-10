@@ -1,20 +1,23 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Utils;
 
-public class ObjectProperties : MonoBehaviour {
-
-  public List<Enums.ObjectType> types;
-
-    public bool contains(Enums.ObjectType type)
+namespace Frostie
+{
+    public class ObjectProperties : MonoBehaviour
     {
-        foreach (var item in types)
+
+        public List<Enums.ObjectType> types;
+
+        public bool contains(params Enums.ObjectType[] requiredTypes)
         {
-            if(item.Equals(type))
+            foreach (var requiredType in requiredTypes)
             {
-                return true;
+                if (!types.Contains(requiredType))
+                {
+                    return false;
+                }
             }
+            return true;
         }
-        return false;
     }
 }

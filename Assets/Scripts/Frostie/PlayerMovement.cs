@@ -2,85 +2,88 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+namespace Frostie
 {
-
-    [SerializeField] private float speed = 10;
-    [SerializeField] private float jumpHight = 40;
-    public float viewDirection { get; set; }
-
-    private float movement;
-    private bool isWalking = false;
-    private bool grounded = false;
-
-    private Rigidbody2D playerRigidbody;
-
-    private void Start()
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class PlayerMovement : MonoBehaviour
     {
-        playerRigidbody = GetComponent<Rigidbody2D>();
-    }
 
-    public void move(float inputX)
-    {
-        viewDirection = transform.localScale.x / Mathf.Abs(transform.localScale.x);
+        [SerializeField] private float speed = 10;
+        [SerializeField] private float jumpHight = 40;
+        public float viewDirection { get; set; }
 
-        if (viewDirection * inputX < 0)
+        private float movement;
+        private bool isWalking = false;
+        private bool grounded = false;
+
+        private Rigidbody2D playerRigidbody;
+
+        private void Start()
         {
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-            viewDirection *= -1;
+            playerRigidbody = GetComponent<Rigidbody2D>();
         }
 
-        movement = speed * inputX;
-
-        bool value = (movement != 0.0f);
-
-        if (isWalking != value)
+        public void move(float inputX)
         {
-            isWalking = value;
+            viewDirection = transform.localScale.x / Mathf.Abs(transform.localScale.x);
 
+            if (viewDirection * inputX < 0)
+            {
+                Vector3 scale = transform.localScale;
+                scale.x *= -1;
+                transform.localScale = scale;
+                viewDirection *= -1;
+            }
+
+            movement = speed * inputX;
+
+            bool value = (movement != 0.0f);
+
+            if (isWalking != value)
+            {
+                isWalking = value;
+
+                FrostieAnimationManager frostieAnimationManager = GetComponent<FrostieAnimationManager>();
+                if (frostieAnimationManager != null)
+                {
+                    frostieAnimationManager.animateWalking(isWalking);
+                }
+                else
+                {
+                    Animator animator = GetComponentInChildren<Animator>();
+                    animator.SetBool("IsWalking", isWalking);
+                }
+            }
+
+            FrostieSoundManager frostieSoundManager = GetComponent<FrostieSoundManager>();
+            if (frostieSoundManager != null)
+            {
+                frostieSoundManager.playWalkingSound(movement);
+            }
+        }
+
+        public void jump()
+        {
             FrostieAnimationManager frostieAnimationManager = GetComponent<FrostieAnimationManager>();
             if (frostieAnimationManager != null)
             {
-                frostieAnimationManager.animateWalking(isWalking);
+                frostieAnimationManager.animateJump();
             }
             else
             {
-                Animator animator = GetComponentInChildren<Animator>();
-                animator.SetBool("IsWalking", isWalking);
+                GetComponentInChildren<Animator>().SetTrigger("Jump");
             }
         }
-
-        FrostieSoundManager frostieSoundManager = GetComponent<FrostieSoundManager>();
-        if (frostieSoundManager != null)
+        public void doJump()
         {
-            frostieSoundManager.playWalkingSound(movement);
+            playerRigidbody.AddForce(new Vector2(0, jumpHight), ForceMode2D.Impulse);
         }
-    }
 
-    public void jump()
-    {
-        FrostieAnimationManager frostieAnimationManager = GetComponent<FrostieAnimationManager>();
-        if (frostieAnimationManager != null)
+        void FixedUpdate()
         {
-            frostieAnimationManager.animateJump();
+            float speedX = movement;
+            float speedY = playerRigidbody.velocity.y;
+            playerRigidbody.velocity = new Vector2(speedX, speedY);
         }
-        else
-        {
-            GetComponentInChildren<Animator>().SetTrigger("Jump");
-        }
-    }
-    public void doJump()
-    {
-        playerRigidbody.AddForce(new Vector2(0, jumpHight), ForceMode2D.Impulse);
-    }
-
-    void FixedUpdate()
-    {
-        float speedX = movement;
-        float speedY = playerRigidbody.velocity.y;
-        playerRigidbody.velocity = new Vector2(speedX, speedY);
     }
 }

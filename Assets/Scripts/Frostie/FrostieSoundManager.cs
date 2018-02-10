@@ -1,88 +1,90 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class FrostieSoundManager : MonoBehaviour 
+namespace Frostie
 {
-    public AudioClip Jump;
-    public AudioClip Walk;
-    private bool isWalking;
-
-    public AudioClip Melting;
-    public AudioClip FreezeGround;
-
-    public AudioClip Death;
-    public AudioClip DeathInFire;
-
-    public void playJumpSound()
+    public class FrostieSoundManager : MonoBehaviour
     {
-        if (GetComponent<AudioSource>().isPlaying)
+        public AudioClip Jump;
+        public AudioClip Walk;
+        private bool isWalking;
+
+        public AudioClip Melting;
+        public AudioClip FreezeGround;
+
+        public AudioClip Death;
+        public AudioClip DeathInFire;
+
+        public void playJumpSound()
         {
-            if (GetComponent<AudioSource>().clip.name.Equals(Jump.name))
-                return;
+            if (GetComponent<AudioSource>().isPlaying)
+            {
+                if (GetComponent<AudioSource>().clip.name.Equals(Jump.name))
+                    return;
+                else
+                    GetComponent<AudioSource>().Stop();
+            }
+            GetComponent<AudioSource>().PlayOneShot(Jump);
+        }
+
+        public void playWalkingSound(float movement)
+        {
+            if (Mathf.Abs(movement) >= 0.1)
+            {
+                if (!isWalking)
+                {
+                    GetComponent<AudioSource>().clip = Walk;
+                    GetComponent<AudioSource>().loop = true;
+                    GetComponent<AudioSource>().Play();
+                    isWalking = true;
+                }
+            }
             else
-                GetComponent<AudioSource>().Stop();
+            {
+                if (isWalking && GetComponent<AudioSource>().clip.name.Equals(Walk.name))
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                GetComponent<AudioSource>().loop = false;
+                isWalking = false;
+            }
         }
-        GetComponent<AudioSource>().PlayOneShot(Jump);
-      }
 
-    public void playWalkingSound(float movement)
-    {
-        if (Mathf.Abs(movement) >= 0.1)
+        public void playMeltingSound()
         {
-            if (!isWalking)
+            if (GetComponent<AudioSource>().isPlaying)
             {
-                GetComponent<AudioSource>().clip = Walk;
-				GetComponent<AudioSource>().loop = true;
-                GetComponent<AudioSource>().Play();
-                isWalking = true;
+                if (GetComponent<AudioSource>().clip.name.Equals(Melting.name))
+                    return;
+                else
+                    GetComponent<AudioSource>().Stop();
             }
+            GetComponent<AudioSource>().PlayOneShot(Melting);
         }
-        else
+
+        public void playFreezingGroundSound()
         {
-            if (isWalking && GetComponent<AudioSource>().clip.name.Equals(Walk.name))
+            if (GetComponent<AudioSource>().isPlaying)
             {
-                GetComponent<AudioSource>().Stop();
+                if (GetComponent<AudioSource>().clip.name.Equals(FreezeGround.name))
+                    return;
+                else
+                    GetComponent<AudioSource>().Stop();
             }
-			GetComponent<AudioSource>().loop = false;
+            GetComponent<AudioSource>().PlayOneShot(FreezeGround);
+        }
+
+        public void playDeathSound()
+        {
             isWalking = false;
-        } 
-    }
-
-    public void playMeltingSound()
-    {
-        if (GetComponent<AudioSource>().isPlaying)
-        {
-            if (GetComponent<AudioSource>().clip.name.Equals(Melting.name))
-                return;
-            else
-                GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().PlayOneShot(Death);
         }
-		GetComponent<AudioSource>().PlayOneShot(Melting);
-    }
 
-    public void playFreezingGroundSound()
-    {
-        if (GetComponent<AudioSource>().isPlaying)
+        public void playDeathInFireSound()
         {
-            if (GetComponent<AudioSource>().clip.name.Equals(FreezeGround.name))
-                return;
-            else
-                GetComponent<AudioSource>().Stop();
+            isWalking = false;
+            GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().PlayOneShot(DeathInFire);
         }
-        GetComponent<AudioSource>().PlayOneShot(FreezeGround);
-    }
-
-    public void playDeathSound()
-    {
-		isWalking = false;
-		GetComponent<AudioSource>().Stop();
-        GetComponent<AudioSource>().PlayOneShot(Death);
-    }
-
-    public void playDeathInFireSound()
-    {
-		isWalking = false;
-		GetComponent<AudioSource>().Stop();
-        GetComponent<AudioSource>().PlayOneShot(DeathInFire);
     }
 }

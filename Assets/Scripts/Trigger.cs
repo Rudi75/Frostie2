@@ -4,49 +4,51 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-
-public abstract class Trigger : MonoBehaviour
+namespace Frostie
 {
-    [SerializeField] bool stayActive;
-
-    private bool isActive_ = false;
-    private List<TriggerAble> targets = new List<TriggerAble>();
-
-    protected void onChange(bool activate)
+    public abstract class Trigger : MonoBehaviour
     {
-        if (activate)
-        {
-            isActivated = true;
-        }
-        else if (isActivated && !stayActive)
-        {
-            isActivated = false;
-        }
-    }
+        [SerializeField] bool stayActive;
 
+        private bool isActive_ = false;
+        private List<TriggerAble> targets = new List<TriggerAble>();
 
-    public bool isActivated
-    {
-        get
+        protected void onChange(bool activate)
         {
-            return isActive_;
-        }
-        set
-        {
-            if(isActive_ != value)
+            if (activate)
             {
-                isActive_ = value;
-                foreach (TriggerAble target in targets)
+                isActivated = true;
+            }
+            else if (isActivated && !stayActive)
+            {
+                isActivated = false;
+            }
+        }
+
+
+        public bool isActivated
+        {
+            get
+            {
+                return isActive_;
+            }
+            set
+            {
+                if (isActive_ != value)
                 {
-                    target.trigger();
+                    isActive_ = value;
+                    foreach (TriggerAble target in targets)
+                    {
+                        target.trigger();
+                    }
                 }
             }
         }
+
+        internal void addTarget(TriggerAble triggerAble)
+        {
+            targets.Add(triggerAble);
+        }
     }
 
-    internal void addTarget(TriggerAble triggerAble)
-    {
-        targets.Add(triggerAble);
-    }
 }
-

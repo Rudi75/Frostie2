@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.Utils
+namespace Frostie
 {
     public class Enums
     {
@@ -17,7 +17,6 @@ namespace Assets.Scripts.Utils
         public enum ObjectType
         {
             SOLID,
-            MOVEABLE,
             LEATHAL,
             HOT,
             SLIPPERY
