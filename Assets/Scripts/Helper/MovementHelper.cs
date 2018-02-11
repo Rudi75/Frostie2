@@ -26,7 +26,7 @@ namespace Frostie
 
         public static bool canMove(Collider2D aCollider, Vector2 direction, LayerMask collisionLayers)
         {
-            float xPosition = direction == Vector2.right ? aCollider.bounds.max.x : aCollider.bounds.min.x;
+            float xPosition = direction == Vector2.right ? aCollider.bounds.max.x + 0.1f : aCollider.bounds.min.x - 0.1f;
             Vector2 topPosition = new Vector2(xPosition, aCollider.bounds.max.y - 0.1f);
             Vector2 middlePosition = new Vector2(xPosition, aCollider.bounds.center.y);
             Vector2 bottomPosition = new Vector2(xPosition, aCollider.bounds.min.y + 0.1f);
